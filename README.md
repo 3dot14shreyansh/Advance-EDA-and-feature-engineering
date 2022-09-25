@@ -26,4 +26,22 @@ We have taken a dataset which is as raw as it can be possible. The idea to do su
  
  ### EDA 2: <br />
  
- - 
+ - We splitted our already splitted data set into train and test data using sklearn's model selection 
+ [train-test-split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
+ 
+ - We treated missing values here
+   - Categorical variable : <br /> with the help of if statment we collected all the categorical varible. To catch this we simply collected features with datatype as strings and replaced all null values with label as 'missing'.
+   - Numerical variable : <br /> with the help of if statment we collected all the numerical varible. To catch this we simply collected features with datatype as not equall to strings and replaced all null values with 
+   [median](https://vitalflux.com/pandas-impute-missing-values-mean-median-mode/) 
+   values.
+   - Year variable : <br /> with the help of if statment we collected all the year varible. To catch this we simply collected features with which have datatype as int, is not SalePrice, is not included in Id and is not included in numerical variables.
+   
+ - Handling rare Categorical Feature:<br /> With the help of 
+ [numpy](https://numpy.org) 
+ we recategorised the features which are present in categorical features and have contribution of less than 1 percent with tag as 'Rare'. The value of 1 percent has been chossen randomly and is mildly based on the size of dataset
+ 
+ 
+ ### Feature scaling: <br />
+ - Since every feature has 
+     
+    

@@ -42,6 +42,11 @@ We have taken a dataset which is as raw as it can be possible. The idea to do su
  
  
  ### Feature scaling: <br />
- - Since every feature has 
-     
+ - Since every feature has has value distribution of its own we have here converted it in scale of 0 to 1, Min-Max-scale using sklearn.
+ - This dataset is now almost ready to put in a ML algo.
+ 
+ 
+ ### Feature selection: <br />    
+ - We have noticed too many number of columns in the dataset, it would be nice if we evaluate the contribution of those independent features for the dependent feature.
+ - With the help of Lasso and sklearn's SelectFromModel we will fetch out only those independent features which are adding sinificance to our model.
     
